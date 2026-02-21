@@ -1,26 +1,29 @@
 # Galleria screenshot
 
-> Inserisci qui i file immagine reali per visualizzarli direttamente su GitHub.
+## Mobile 1
 
-## Mobile
+![Mobile 1](./01_mobile_6750.png)
 
-- Biglietti (da usare)
-- Profilo punti (BRO)
-- Drink: Le mie consumazioni
-- Drink: Listino
-- Home: carosello + eventi
-- Profilo punti (CAVALLO)
+## Mobile 2
 
-## Web/Admin
+![Mobile 2](./02_mobile_6751.png)
 
-- Admin Dashboard
+## Mobile 3
 
----
+![Mobile 3](./03_mobile_6752.png)
 
-Quando i file verranno aggiunti con i nomi nel `README.md`, appariranno qui così:
+## Mobile 4
 
-```md
-![Biglietti](./01_tickets_da_usare.png)
-![Profilo BRO](./02_profilo_punti_bro.png)
-...
-```
+![Mobile 4](./04_mobile_6753.png)
+
+## Mobile 5
+
+![Mobile 5](./05_mobile_6754.png)
+
+## Mobile 6
+
+![Mobile 6](./06_mobile_6755.png)
+
+## Admin Dashboard (Web)
+
+![Admin Dashboard](./07_admin_dashboard_web.png)
