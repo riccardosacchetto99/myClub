@@ -123,18 +123,30 @@ Buffer prudenziale extra:
 
 - **+€100 – €350 / mese**
 
-## 3.4 Totale Stripe stimato
+## 3.4 Sintesi commissioni Stripe (senza totale aggregato)
 
-- **~€1.518 – €1.868 / mese**
+Le commissioni Stripe vanno sempre lette come:
+
+- componente percentuale su GMV,
+- componente fissa per transazione,
+- eventuali extra fee (carte non EEA, dispute, servizi opzionali).
+
+Formula pratica:
+
+- `FeeStripe ≈ (GMV × fee%) + (N_transazioni × fee_fissa) + extra_fee`
 
 ---
 
-## 4) Totale piattaforma (Google + Stripe)
+## 4) Costo piattaforma: impostazione corretta
 
-Somma stimata mese:
+Per evitare stime rigide eccessive, il costo finale va calcolato mese per mese con:
 
-- **minimo realistico: ~€1.524**
-- **range prudenziale: ~€1.550 – €1.930**
+- costi Google/Firebase (quasi fissi a questi volumi),
+- commissioni Stripe variabili in base a GMV e numero transazioni.
+
+Formula:
+
+- `CostoTotale = CostoGoogle + FeeStripe`
 
 ---
 
@@ -163,21 +175,21 @@ Anche considerando fee Stripe sull’incremento, il saldo resta ampiamente posit
 
 ---
 
-## 6) Grafico convenienza (incremento GMV vs costo piattaforma)
+## 6) Grafico convenienza (incremento GMV vs commissioni + costi operativi)
 
 ```mermaid
 xychart-beta
-    title "myClub (myZero): Convenienza Mensile Stimata"
+    title "myClub (myZero): Uplift Ricavi vs Costi Operativi"
     x-axis ["+0%", "+5%", "+10%", "+15%", "+20%"]
     y-axis "Euro" 0 --> 13000
     bar [0, 3060, 6120, 9180, 12240]
-    line [1750, 1750, 1750, 1750, 1750]
+    line [350, 500, 700, 950, 1200]
 ```
 
 Lettura del grafico:
 
 - **barre**: extra fatturato mensile da fidelizzazione
-- **linea**: costo mensile piattaforma stimato (~€1.750 benchmark medio)
+- **linea**: esempio di costo operativo progressivo (Google + commissioni Stripe), senza usare un totale fisso unico
 
 Già con un incremento vicino al **+5%** il rapporto costo/beneficio è favorevole.
 
@@ -209,4 +221,3 @@ Se `UpliftNetto > CostoTotale`, l’app è economicamente in vantaggio.
 - Firestore billing example: https://firebase.google.com/docs/firestore/billing-example
 - Firebase Cloud Messaging (overview): https://firebase.google.com/docs/cloud-messaging
 - Stripe pricing (Italia): https://stripe.com/it/pricing
-
